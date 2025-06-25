@@ -1,0 +1,64 @@
+.System{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.System-Top-title{
+    -webkit-app-region: drag;
+}
+
+.System-Top{
+    display: grid;
+    grid-template-columns: 0px  1fr 50px 50px 50px 0px;
+    background-color: black;
+    height: 40px;
+    color: white;
+}
+.win-btn{
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+.btn-min:hover{
+    background-color: rgba(0, 178, 255, 1);
+}
+.btn-max:hover{
+    background-color: rgba(0, 178, 255, 1);
+}
+
+.btn-close1:hover{
+    background-color: rgba(255, 0, 0, 1);
+}
+.btn-min:active{
+    background-color: black;
+}
+.btn-max:active{
+    background-color: black;
+}
+
+.btn-close1:active{
+    background-color: black;
+}
+.System-Top-icon{
+    line-height: 40px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.System-Top-icon:hover{
+    line-height: 40px;
+    text-align: center;
+    font-size: 35px;
+    background-color: rgba(0, 178, 255, 1);
+    color: white;
+}
+.System-Top-icon:active{
+    line-height: 40px;
+    text-align: center;
+    font-size: 35px;
+    background-color: rgba(0, 178, 255, 1);
+    color: white;
+}
+.System-Top-icon-svg{
+    margin-bottom: 8px;
+}

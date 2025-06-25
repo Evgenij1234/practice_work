@@ -1,0 +1,96 @@
+{
+  "name": "generating_letters",
+  "version": "0.1.0",
+  "description": "generating_letters",
+  "author": "evgen",
+  "private": true,
+  "main": "./electron/main.js",
+  "productName": "LetterGenerator",
+  "homepage": "./",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.0",
+    "child_process": "^1.0.2",
+    "docx": "^9.4.1",
+    "docxtemplater": "^3.61.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "file-saver": "^2.0.5",
+    "pizzip": "^3.1.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "set BROWSER=none && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "package-win": "electron-builder --win",
+    "package-linux": "electron-builder --linux deb",
+    "make": "electron-forge make",
+    "build-electron": "mkdir -p build/electron && cp -r electron/* build/electron/ && cp -r js_electron/* build/electron/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^29.1.5",
+    "electron-builder": "^24.12.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.77.6"
+  },
+  "build": {
+    "asar": true,
+    "extends": null,
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "!electron/*.md"
+    ],
+    "extraResources": [
+      { "from": "electron/pdf_generator", "to": "." },
+      { "from": "electron/odt_generator", "to": "." }
+    ],
+    "linux": {
+      "target": ["deb"],
+      "category": "Office",
+      "desktop": {
+        "StartupWMClass": "letter-generator"
+      },
+      "maintainer": "evgen"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

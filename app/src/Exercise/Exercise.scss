@@ -1,0 +1,310 @@
+
+.Exercise {
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: minmax(250px, 1400px);
+    gap: 15px;
+    color: #000000;
+    padding: 10px;
+}
+.Exercise-label{
+    color: black;
+    
+}
+
+  .Exercise-centr-right-textarea {
+    width: 100%; 
+    height: 200px;   
+    resize: none;      
+    padding: 10px;    
+    font-size: 16px;   
+  }
+  .Exercise-centr-right-textarea::placeholder {
+    color: #000000; 
+    opacity: 0.6; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .Exercise-avax{
+
+  }
+  .Exercise-centr{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100%;
+  }
+  .Exercise-centr-left{
+    
+  }
+  .Exercise-centr-right{
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .Exercise-text{
+    display: grid;
+    grid-template-rows: 35px auto;
+    //height: 200px;
+  }
+  .Exercise-text-fio{
+    text-align: center;
+    margin: -10px;
+  }
+  .Exercise-text-fio-message{
+    display: grid;
+    margin-bottom: 15px;
+    min-height: 150px;
+    height: auto;
+    transition: height 0.3s ease-out;
+  }
+  .Exercise-text-label {
+    margin-top: 20px;
+    color: #000000;
+    opacity: 0.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    height: auto;
+    min-height: 100px;
+    transition: height 0.2s ease-out;
+    
+    // Стили для скроллбара
+    overflow-y: auto; // Всегда показывать вертикальный скроллбар, если контент превышает высоту
+    resize: vertical; // Позволяет пользователю изменять размер текстового поля
+    
+    // Стилизация скроллбара (работает в современных браузерах)
+    scrollbar-width: thin; // Для Firefox
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; // Для Firefox
+    
+    &::-webkit-scrollbar {
+      width: 8px; // Ширина скроллбара для WebKit браузеров (Chrome, Safari)
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: transparent; // Фон трека
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3); // Цвет ползунка
+      border-radius: 4px; // Закругление углов
+    }
+  }
+  
+  .Exercise-text-label::placeholder {
+    color: #000000;
+  }
+
+
+
+
+  .text-left{
+    text-align: left;
+  }
+  .text-centr{
+    text-align: center;
+  }
+  .Exercise-bootom{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .button{
+    
+  }
+  .Exercise-box-button{
+
+  }
+  .Exercise_cange{
+    display: grid;
+    grid-template-columns: 65px auto;
+  }
+  .footer-fields{
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+  .footer-fields-left{
+    display: grid;
+    gap: 10px;
+  }
+  .footer-fields-left-input{
+    width: 200px;
+
+  }
+  .footer-fields-centr{
+    display: grid;
+    justify-content: center;
+  }
+  .footer-fields-left-input{
+      font-weight: 800;
+  }
+
+input {
+  border-radius: 5px; /* Округление углов */
+  padding: 10px 15px; /* Отступы внутри поля */
+  font-size: 16px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Тонкая граница */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень вокруг поля */
+  transition: all 0.3s ease; /* Плавный переход для всех эффектов */
+}
+
+input:focus {
+  border-color: #4CAF50; /* Изменение цвета границы при фокусе */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Тень с эффектом свечения при фокусе */
+  outline: none; /* Убирает стандартное выделение при фокусе */
+}
+
+input:hover {
+  border-color: #45a049; /* Темнеет граница при наведении */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+input:disabled {
+  background-color: #f0f0f0; /* Светлый фон для отключенных полей */
+  border-color: #ddd; /* Светлая граница для отключенных полей */
+  cursor: not-allowed; /* Указатель мыши в виде крестика для отключенных полей */
+}
+
+textarea {
+  border-radius: 5px; /* Округление углов */
+  padding: 10px 15px; /* Отступы внутри текстового поля */
+  font-size: 16px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Тонкая граница */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень вокруг поля */
+  transition: all 0.3s ease; /* Плавный переход для всех эффектов */
+  width: 100%; /* Занимает всю доступную ширину */
+  resize: vertical; /* Ограничение изменения размера только по вертикали */
+}
+
+textarea:focus {
+  border-color: #4CAF50; /* Изменение цвета границы при фокусе */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Тень с эффектом свечения при фокусе */
+  outline: none; /* Убирает стандартное выделение при фокусе */
+}
+
+textarea:hover {
+  border-color: #45a049; /* Темнеет граница при наведении */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+textarea:disabled {
+  background-color: #f0f0f0; /* Светлый фон для отключенных полей */
+  border-color: #ddd; /* Светлая граница для отключенных полей */
+  cursor: not-allowed; /* Указатель мыши в виде крестика для отключенных полей */
+}
+
+select {
+  border-radius: 5px; /* Округление углов */
+  padding: 10px 15px; /* Отступы внутри */
+  font-size: 16px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Тонкая граница */
+  background-color: #fff; /* Белый фон */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  transition: all 0.3s ease; /* Плавный переход */
+  height: 45px; /* Устанавливаем высоту элемента */
+  -webkit-appearance: none; /* Для Safari */
+  -moz-appearance: none; /* Для Firefox */
+}
+
+select:focus {
+  border-color: #4CAF50; /* Зелёная граница при фокусе */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Тень с эффектом свечения */
+  outline: none; /* Убирает стандартное выделение при фокусе */
+}
+
+select:hover {
+  border-color: #45a049; /* Темнеет граница при наведении */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+select:disabled {
+  background-color: #f0f0f0; /* Светлый фон для отключенного поля */
+  border-color: #ddd; /* Светлая граница для отключенного поля */
+  cursor: not-allowed; /* Курсор крестик при отключенном элементе */
+}
+
+/* Стиль для выпадающего списка */
+select option {
+  padding: 10px; /* Отступы для элементов списка */
+  font-size: 16px; /* Размер шрифта для опций */
+  background-color: #fff; /* Белый фон для опций */
+  border: none; /* Убирает границу */
+  box-shadow: none; /* Убирает тень */
+}
+
+select option:hover {
+  background-color: #f5f5f5; /* Изменяет фон при наведении на опцию */
+  cursor: pointer; /* Курсор при наведении */
+}
+
+select option:checked {
+  background-color: #e0f7e0; /* Зелёный фон для выбранной опции */
+}
+
+.Exercise-filetype {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Отступ между элементами */
+
+}
+
+.Exercise-filetype-blok {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px; /* Размер шрифта */
+}
+
+.Exercise-filetype-input {
+  accent-color: #4CAF50; /* Зеленый цвет для радиокнопок */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Exercise-filetype-input:checked {
+  background-color: #4CAF50; /* Зеленый фон для выбранной кнопки */
+  border: 2px solid #4CAF50; /* Зеленая граница для выбранной кнопки */
+}
+
+.Exercise-filetype-blok:hover .Exercise-filetype-input {
+  transform: scale(1.1); /* Увеличение радиокнопки при наведении */
+}
+
+.Exercise-box-button {
+
+}
+
+.button {
+  padding: 10px 20px; /* Отступы */
+  font-size: 16px; /* Размер шрифта */
+  background-color: #4CAF50; /* Зеленый фон */
+  color: white; /* Белый текст */
+  border: none; /* Без границы */
+  border-radius: 5px; /* Округлые углы */
+  cursor: pointer; /* Курсор в виде руки */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049; /* Темнеет фон при наведении */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Усиленная тень при наведении */
+}
+.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
