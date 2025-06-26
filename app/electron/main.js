@@ -23,9 +23,9 @@ const createWindow = () => {
   });
 
   // и загрузить index.html приложения.
-  mainWindow.loadFile(path.join(__dirname, "../build/index.html")); //закомменитровать если надо перейти к dev версии
+  //mainWindow.loadFile(path.join(__dirname, "../build/index.html")); //закомменитровать если надо перейти к dev версии
 
-  /*const startUrl = process.env.ELECTRON_START_URL || url.format({//закомментировать если надо перейти к билд версии
+  const startUrl = process.env.ELECTRON_START_URL || url.format({//закомментировать если надо перейти к билд версии
     pathname: path.join(__dirname, '../index.html'),
     protocol: 'file:',
     slashes: true
@@ -62,15 +62,6 @@ ipcMain.on("max-window", () => {
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();
 });
-
-
-
-
-
-
-
-
-
 
 // Обработка данных из React и запуск бинарных файлов
 
